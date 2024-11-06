@@ -1,0 +1,199 @@
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: 'Mont', sans-serif;
+    scroll-behavior: smooth;
+    height: 100%;
+}
+
+/* Navbar Styling */
+.navbar {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 15px;
+    font-weight: bold;
+    z-index: 10;
+}
+
+.navbar a, .dropdown a {
+    text-decoration: none;
+    color: #FFFFFF;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.navbar a:hover, .dropdown-content a:hover {
+    color: #AED9AA;
+    transform: scale(1.1);
+}
+
+/* Dropdown Styling */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-toggle {
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #354E33;
+    min-width: 120px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    padding: 10px 15px;
+    display: block;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Section Styles */
+.page {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInSection 1s forwards;
+}
+
+/* Backgrounds for Each Page */
+#home {
+    background-image: url('image1.jpg');
+}
+
+#toc {
+    background-image: url('image2.jpg');
+}
+
+#lessons {
+    background-image: url('image3.jpg');
+}
+
+#students {
+    background-image: url('image4.jpg');
+}
+
+#students-teacher {
+    background-image: url('image5.jpg');
+}
+
+#teacher {
+    background-image: url('image6.jpg');
+}
+
+/* Reference Section Styles */
+#reference {
+    position: relative;
+    background-image: url('image7.jpg'); /* Add your background image here */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Social Links Positioned to the Right */
+.social-links {
+    position: absolute;
+    bottom: 20px; /* Adjust as necessary to align with "CONNECT WITH US" */
+    right: 30px; /* Adjust this value as necessary */
+    display: flex;
+    gap: 10px; /* Space between each icon */
+}
+
+/* Social Icon Styling */
+.social-icon {
+    width: 30px; /* Small size for icons */
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1); /* Enlarge slightly on hover */
+}
+
+/* Explore Button */
+.explore-img {
+    width: 150px;
+    height: auto;
+    position: absolute;
+    bottom: 20%;
+    left: 45%;
+    transition: transform 0.3s ease;
+}
+
+.explore-img:hover {
+    transform: scale(1.05);
+}
+
+/* Image Nav Links */
+.image-nav-links {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    position: absolute;
+    bottom: 0%; /* Moved lower */
+}
+
+.nav-image {
+    width: 250px;
+    height: auto;
+    margin: 0 7px;
+    transition: transform 0.3s ease;
+}
+
+.nav-image:hover {
+    transform: scale(1.05);
+}
+
+/* Side Image Links on Lessons Page */
+.lessons-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    Margin-top: -500px; /* move the ls9&10 upward */
+}
+
+.side-image-link {
+    display: inline-block;
+}
+
+.side-nav-image {
+    width: 250px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.side-nav-image:hover {
+    transform: scale(1.05);
+}
+
+/* Animation Keyframes */
+@keyframes fadeInSection {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
